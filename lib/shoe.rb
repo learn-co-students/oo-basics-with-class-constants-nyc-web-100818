@@ -1,9 +1,12 @@
 class Shoe
   attr_accessor :color, :size, :material, :condition
-  attr_reader :brand
+  attr_reader :brands
 
-  def initialize(brand)
-    @brand = brand
+  BRANDS = []
+
+  def initialize(brands)
+    @brands = brands
+    BRANDS << @brands unless BRANDS.include?(@brands)  #doing BRANDS array/ pushing given @brands into the array unless its already there in the array (include?)brands
   end
 
   def cobble
