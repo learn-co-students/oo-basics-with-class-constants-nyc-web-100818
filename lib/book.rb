@@ -1,10 +1,10 @@
 class Book
-  attr_accessor :author, :page_count # removed for :genre bc need to define a writer explicitly 
-  attr_reader :title, :genre # add in for genre bc we still want a reader
+  attr_accessor :author, :page_count
+  attr_reader :title, :genre
+  GENRES = [] # a constant (bc it's all caps)
+    # constants are avail to all instances of a particular class
 
-  GENRES = []
-
-  def initialize(title)
+    def initialize(title)
     @title = title
   end
 
@@ -12,10 +12,8 @@ class Book
     puts "Flipping the page...wow, you read fast!"
   end
 
-  # Explicitly define the genre= method, to integrate our class constant into the method
-  def genre=(genre)
+  def genre=(genre) # adding customization to this method
     @genre = genre
-    GENRES << genre # add logic for the class constant
+    GENRES << genre # shovel into GENRES WHEN the genre is assigned 
   end
-
 end

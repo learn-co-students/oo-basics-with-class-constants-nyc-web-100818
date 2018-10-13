@@ -134,13 +134,13 @@ class Book
   # create the writer for genre and add the logic for the class constant
   def genre=(genre)
     @genre = genre
-    GENRES << genre 
+    GENRES << genre
   end
 end
 ```
 
 Now all the tests will pass!
-Try to complete the similar exercise below where the `Shoe` class can keep track of all of the brands of the different show objects.
+Try to complete the similar exercise below where the `Shoe` class can keep track of all of the brands of the different shoe objects.
 
 ## Shoe Class
 
